@@ -448,41 +448,21 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "1a683bf9",
-        "outputId": "9dd2c5ca-0c21-4e9b-8a22-152291661b67"
+        "id": "d7da691c",
+        "outputId": "bc8a32e6-7dbb-47db-9d86-e6f73f9b33e8"
       },
       "source": [
-        "pip install git+https://github.com/acc714710-star/hhajaj.git"
+        "import os\n",
+        "\n",
+        "# Clone the repository\n",
+        "!git clone https://github.com/acc714710-star/hhajaj.git\n",
+        "\n",
+        "# Change to the project directory (optional, depending on next steps)\n",
+        "# project_dir = 'hhajaj'\n",
+        "# if os.path.exists(project_dir):\n",
+        "#    %cd {project_dir}"
       ],
       "execution_count": 1,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Collecting git+https://github.com/acc714710-star/hhajaj.git\n",
-            "  Cloning https://github.com/acc714710-star/hhajaj.git to /tmp/pip-req-build-vdwhao3d\n",
-            "  Running command git clone --filter=blob:none --quiet https://github.com/acc714710-star/hhajaj.git /tmp/pip-req-build-vdwhao3d\n",
-            "  Resolved https://github.com/acc714710-star/hhajaj.git to commit 1a7cf33f54e5704f82f5a9d1082f73a4a230f6c8\n",
-            "\u001b[31mERROR: git+https://github.com/acc714710-star/hhajaj.git does not appear to be a Python project: neither 'setup.py' nor 'pyproject.toml' found.\u001b[0m\u001b[31m\n",
-            "\u001b[0m"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "3aa37f8b",
-        "outputId": "166e53e0-d880-41d9-ab9b-52be8d739b98"
-      },
-      "source": [
-        "!git clone https://github.com/acc714710-star/hhajaj.git"
-      ],
-      "execution_count": 2,
       "outputs": [
         {
           "output_type": "stream",
@@ -493,16 +473,33 @@
             "remote: Counting objects: 100% (82/82), done.\u001b[K\n",
             "remote: Compressing objects: 100% (76/76), done.\u001b[K\n",
             "remote: Total 82 (delta 34), reused 32 (delta 6), pack-reused 0 (from 0)\u001b[K\n",
-            "Receiving objects: 100% (82/82), 184.03 KiB | 9.20 MiB/s, done.\n",
+            "Receiving objects: 100% (82/82), 184.03 KiB | 1.34 MiB/s, done.\n",
             "Resolving deltas: 100% (34/34), done.\n"
           ]
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "d0bcd572"
+      },
+      "source": [
+        "# Install requirements if a requirements.txt file exists\n",
+        "requirements_file = '/content/hhajaj/requirements.txt'\n",
+        "if os.path.exists(requirements_file):\n",
+        "    !pip install -r {requirements_file}\n",
+        "else:\n",
+        "    print(f\"No requirements.txt found at {requirements_file}\")"
+      ],
+      "execution_count": null,
+      "outputs": []
     }
   ],
   "metadata": {
     "colab": {
-      "provenance": []
+      "provenance": [],
+      "gpuType": "T4"
     },
     "kernelspec": {
       "name": "python3",
@@ -510,7 +507,8 @@
     },
     "language_info": {
       "name": "python"
-    }
+    },
+    "accelerator": "GPU"
   },
   "nbformat": 4,
   "nbformat_minor": 0
