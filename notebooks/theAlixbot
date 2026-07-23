@@ -1,0 +1,94 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d07532e2",
+        "outputId": "47d4f11b-8f3c-402a-f881-610a5a8a315f"
+      },
+      "source": [
+        "import os\n",
+        "\n",
+        "# Clone the repository\n",
+        "!git clone https://github.com/acc714710-star/hhajaj.git\n",
+        "\n",
+        "# List the contents of the cloned repository to verify\n",
+        "# Adjust the path if the repository name is different from 'hhajaj'\n",
+        "project_dir = 'hhajaj'\n",
+        "if os.path.exists(project_dir):\n",
+        "    print(f\"Successfully cloned '{project_dir}'. Listing contents:\")\n",
+        "    !ls -F {project_dir}\n",
+        "else:\n",
+        "    print(f\"Failed to clone or locate the repository '{project_dir}'.\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'hhajaj'...\n",
+            "remote: Enumerating objects: 82, done.\u001b[K\n",
+            "remote: Counting objects: 100% (82/82), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (76/76), done.\u001b[K\n",
+            "remote: Total 82 (delta 34), reused 32 (delta 6), pack-reused 0 (from 0)\u001b[K\n",
+            "Receiving objects: 100% (82/82), 184.03 KiB | 10.22 MiB/s, done.\n",
+            "Resolving deltas: 100% (34/34), done.\n",
+            "Successfully cloned 'hhajaj'. Listing contents:\n",
+            "bot.py\tclean.py  helpers/  main.py  Plugins/  r3d.txt\tREADME.md  Run\tweb.py\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9879a80b"
+      },
+      "source": [
+        "### Project Configuration Variables\n",
+        "\n",
+        "Use the form fields below to define any necessary configuration variables for your project. This keeps sensitive information and frequently changed settings separate from the main code, making it easier to manage and update."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "560a55b3"
+      },
+      "source": [
+        "# @title Configuration Variables\n",
+        "\n",
+        "# Example: Bot Token for your application\n",
+        "# You might want to get this from Colab secrets if it's sensitive.\n",
+        "BOT_TOKEN = \"\" # @param {type:\"string\"}\n",
+        "\n",
+        "# Example: Other configuration, if needed\n",
+        "# CONFIG_OPTION = \"default_value\" # @param {type:\"string\"}\n",
+        "\n",
+        "print(\"Configuration variables loaded.\")"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "gpuType": "T4"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "accelerator": "GPU"
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
